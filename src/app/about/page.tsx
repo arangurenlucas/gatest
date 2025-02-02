@@ -1,6 +1,6 @@
 "use client"
 
-import { sendGAEvent } from "@next/third-parties/google";
+import { sendGTMEvent } from "@next/third-parties/google";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
@@ -9,7 +9,7 @@ function About() {
     const pathname = usePathname();
 
     useEffect(() => {
-        sendGAEvent('event', 'page_view', { value: pathname })
+        sendGTMEvent({ event: 'page_view', value: pathname })
     }, [pathname])
 
   return (
