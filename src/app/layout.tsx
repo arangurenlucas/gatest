@@ -25,10 +25,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleAnalytics gaId={process.env.GA_ID!} />
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
-      <GoogleAnalytics gaId={process.env.GA_ID!} />
     </html>
   );
 }
